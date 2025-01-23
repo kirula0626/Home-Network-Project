@@ -1,5 +1,10 @@
 # Home-Network-Project
 ## Layer 2 Managed Network Switch
+### Post Discrption 
+Port 1 : Connects to OpenWRT router 
+Port 2,3,4,5,6,9 : Connects to End Devies inside the network
+Port 7 : Switch Management Port
+Port 8 : UpLink (ISP Internet)
 ![image](https://github.com/user-attachments/assets/6c07d57a-c336-43f3-a4e8-bde614f2bf45)
 ![image](https://github.com/user-attachments/assets/4f706f6f-9b85-4163-a84e-419ec97715f7)
 ![image](https://github.com/user-attachments/assets/07251040-e1c6-4f7e-8a24-1ec89c126805)
