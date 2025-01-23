@@ -1,8 +1,9 @@
 # Home-Network-Project
-## Openwrt
+## Layer 2 Managed Network Switch
 ![image](https://github.com/user-attachments/assets/6c07d57a-c336-43f3-a4e8-bde614f2bf45)
 ![image](https://github.com/user-attachments/assets/4f706f6f-9b85-4163-a84e-419ec97715f7)
 ![image](https://github.com/user-attachments/assets/07251040-e1c6-4f7e-8a24-1ec89c126805)
+## Openwrt
 ![image](https://github.com/user-attachments/assets/6bd97ecb-aebc-4e0c-aaca-e97cf121d608)
 ![image](https://github.com/user-attachments/assets/51ce38cc-560c-44dc-b839-d05c8101098b)
 ![image](https://github.com/user-attachments/assets/0dcda386-6f9b-41b9-adaf-4da05e608655)
@@ -10,11 +11,12 @@
 ![image](https://github.com/user-attachments/assets/11f4db37-52ae-48dc-93a5-eb41360a5ed1)
 ![image](https://github.com/user-attachments/assets/79ed862f-ec9b-4184-99ea-355678571615)
 ![image](https://github.com/user-attachments/assets/3cac8e91-f942-44c0-85f7-9cd64259cc81)
-![image](https://github.com/user-attachments/assets/de803872-a541-4cb2-9ff3-902c91025c8f)
 ![image](https://github.com/user-attachments/assets/36ec9443-8672-447c-a5cb-9cb6f7c69b1b)
 ![image](https://github.com/user-attachments/assets/278049af-9c30-4881-b3e4-c2f2601e31a4)
 ![image](https://github.com/user-attachments/assets/e52cc23c-059f-4e57-9f33-2831f53f5307)
 ![image](https://github.com/user-attachments/assets/81d82ed1-bdf8-46f4-9dfe-a98458767460)
+![image](https://github.com/user-attachments/assets/de803872-a541-4cb2-9ff3-902c91025c8f)
+
 
 
 
