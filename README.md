@@ -1,14 +1,23 @@
 # Home-Network-Project
 ## Layer 2 Managed Network Switch
-### Post Discrption 
-Port 1 : Connects to OpenWRT router 
-Port 2,3,4,5,6,9 : Connects to End Devies inside the network
-Port 7 : Switch Management Port
-Port 8 : UpLink (ISP Internet)
+### Port Description 
+- **Port 1 : Connects to OpenWRT router** 
+- **Port 2,3,4,5,6,9 : Connects to End Devices inside the network**
+- **Port 7 : Switch Management Port**
+- **Port 8 : UpLink (ISP Internet)**
+<br>
+
 ![image](https://github.com/user-attachments/assets/6c07d57a-c336-43f3-a4e8-bde614f2bf45)
+Vlan and PID
 ![image](https://github.com/user-attachments/assets/4f706f6f-9b85-4163-a84e-419ec97715f7)
 ![image](https://github.com/user-attachments/assets/07251040-e1c6-4f7e-8a24-1ec89c126805)
+
 ## Openwrt
+### User Interface
+- Openwrt is...
+- This os is ruuning on Raspberry Pi 4 model B
+- 4GB RAM and 32GB ROM
+- Version : 
 ![image](https://github.com/user-attachments/assets/6bd97ecb-aebc-4e0c-aaca-e97cf121d608)
 ![image](https://github.com/user-attachments/assets/51ce38cc-560c-44dc-b839-d05c8101098b)
 ![image](https://github.com/user-attachments/assets/0dcda386-6f9b-41b9-adaf-4da05e608655)
