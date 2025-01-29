@@ -67,11 +67,9 @@ The following screenshots demonstrate how the system is set up and functioning.
 <br>
 
   - **User interface with Argon Theme**
-  
 ![image](https://github.com/user-attachments/assets/6bd97ecb-aebc-4e0c-aaca-e97cf121d608)
   
   - **Device list with MAC address and it's DHCP IP with lease time**
-
 ![image](https://github.com/user-attachments/assets/51ce38cc-560c-44dc-b839-d05c8101098b)
   
   - **Wifi adapter and Information**
@@ -80,7 +78,6 @@ The following screenshots demonstrate how the system is set up and functioning.
          - Shows Signal strength
          - Can manualy Disconnect connected client(User)
          - Device MAC and BSSID
-
 ![image](https://github.com/user-attachments/assets/11f4db37-52ae-48dc-93a5-eb41360a5ed1) 
 ![image](https://github.com/user-attachments/assets/0dcda386-6f9b-41b9-adaf-4da05e608655)
 
@@ -102,18 +99,75 @@ The following screenshots demonstrate how the system is set up and functioning.
       - This is the uplink interface that forwards all traffic from both the home and guest networks to the ISP.
       - VLAN 1000 is assigned to this interface to separate WAN traffic from internal networks.
       - DHCP is givenn by ISP router (192.168.1.0/24)
+![image](https://github.com/user-attachments/assets/4e01056a-a958-47ca-9559-a23e570e5c01)
 
-![image](https://github.com/user-attachments/assets/4e01056a-a958-47ca-9559-a23e570e5c01) # Interfaces
+- **Firewall zoneing**
 
-![image](https://github.com/user-attachments/assets/de803872-a541-4cb2-9ff3-902c91025c8f) # Firewall Zone
-![image](https://github.com/user-attachments/assets/278049af-9c30-4881-b3e4-c2f2601e31a4) # Trafic rules
+  1. **lan (Local Area Network)**
+     - Forwarding: **lan → wan, tailscale**
+     - Input: **Accept** (Devices on LAN can communicate freely)
+     - Output: **Accept** (LAN devices can send traffic anywhere)
+     - Forward: **Accept** (Traffic is allowed to flow between forwarded zones)
+     - Masquerading: **Disabled** (LAN devices retain their original IP when accessing the internet)
+
+  2. **wan (Wide Area Network - Internet)**
+     - Forwarding: **Rejected** (Traffic from WAN cannot reach internal networks)
+     - Input: **Accept** (Incoming WAN traffic is allowed)
+     - Output: **Accept** (WAN can send responses back)
+     - Forward: **Reject** (WAN traffic is not forwarded to other zones)
+     - Masquerading: **Enabled** (Hides internal network behind WAN IP for outbound connections)
+
+  3. **tailscale (VPN Network)**
+     - Forwarding: **tailscale → lan, wan**
+     - Input: **Accept** (Incoming traffic allowed)
+     - Output: **Accept** (Outbound traffic allowed)
+     - Forward: **Accept** (Forwarding between specified zones is allowed)
+     - Masquerading: **Enabled** (Useful for VPN routing)
+
+  4. **guestwifi (Guest Wi-Fi Network)**
+     - Forwarding: **guestwifi → wan**
+     - Input: **Reject** (Prevents access to OpenWrt router services)
+     - Output: **Accept** (Guest devices can access external services)
+     - Forward: **Reject** (Blocks internal communication between guest devices)
+     - Masquerading: **Disabled** (Guest devices retain their IP)
+
+  5. **VM_Network (Virtual Machine Network)**
+     - Forwarding: **Rejected** (No external communication allowed)
+     - Input: **Accept** (VMs can communicate with OpenWrt services)
+     - Output: **Accept** (VMs can send traffic externally)
+     - Forward: **Accept** (Forwarding allowed within VM network)
+     - Masquerading: **Disabled** (VMs keep their IPs)
+<br><br>
+![image](https://github.com/user-attachments/assets/de803872-a541-4cb2-9ff3-902c91025c8f) 
+<br><br>
+- **Trafic Rule set**
+    - Trafic rules for each zone
+       - Lan device can use ICMP but guest devices stops ICMP
+<br><br>
+![image](https://github.com/user-attachments/assets/278049af-9c30-4881-b3e4-c2f2601e31a4)
+<br><br>
+- **Trafic Port Forwardings**
+    - DNS is use externally port 5353
 ![image](https://github.com/user-attachments/assets/36ec9443-8672-447c-a5cb-9cb6f7c69b1b) # Firewall port forwards
-![image](https://github.com/user-attachments/assets/79ed862f-ec9b-4184-99ea-355678571615) # Routing
+<br><br>
+- **Routing**
+   - Internal Proxmox server VMs use the 10.0.0.0/8 network. Routing is used to provide internet access and connectivity to LAN end devices.
+![image](https://github.com/user-attachments/assets/79ed862f-ec9b-4184-99ea-355678571615)
 
-![image](https://github.com/user-attachments/assets/e52cc23c-059f-4e57-9f33-2831f53f5307) # Bandwith monitor
-
-![image](https://github.com/user-attachments/assets/81d82ed1-bdf8-46f4-9dfe-a98458767460) # Guest Page
-
+- **Bandwith Monitor**
+    - The feature is used to determine each user's download and upload usage.
+<br><br>
+![image](https://github.com/user-attachments/assets/e52cc23c-059f-4e57-9f33-2831f53f5307) 
+<br><br>
+- **Guest Wi-Fi Connectivity Page**
+    - The password consists of 20 characters, including a mix of numbers, uppercase and lowercase letters, and special characters.
+    - A QR code is provided for easy connection.
+    - The password expires and is automatically regenerated every 24 hours.
+    - A real-time countdown shows when the password will expire.
+    - Displays the count of connected devices/clients in real time.
+<br><br>
+![image](https://github.com/user-attachments/assets/81d82ed1-bdf8-46f4-9dfe-a98458767460)
+<br><br>
 
 
 
