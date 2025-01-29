@@ -1,4 +1,14 @@
 # Home-Network-Project
+My interest lies in network security and networking, and I undertook this project to address some challenges I faced in my daily life. As a basic home internet user in the past, I relied on an ISP-provided router, which had limited functionality and belonged to the ISP. This led me to the idea of using the ISP router as an uplink while building my own customizable router with enhanced security features and advanced networking capabilities.
+
+During my research, I explored <a href="https://openwrt.org/">OpenWrt</a>, <a href="https://www.pfsense.org/">pfSense</a>, and <a href="https://raspap.com/">RaspAP</a>. After using all three for a couple of months and engaging with their communities, I realized that OpenWrt was the best choice for my project.
+
+As an intern at <a href="https://www.n-able.biz/">N-able Pvt Ltd</a> Sri Lanka, focusing on networking, and a CCNA candidate, I have intermediate networking knowledge. Additionally, my cybersecurity degree has provided me with a solid understanding of network security. For this project, I used a Raspberry Pi 4 running OpenWrt, initially configuring it as a travel router before transforming it into my home router and firewall.
+
+To enhance my setup, I incorporated a Layer 2 managed switch to connect my PCs using VLANs. I configured OpenWrt in a router-on-a-stick setup, managing inter-VLAN routing and firewall functionalities. My network includes various end devices such as a NAS server, a Proxmox server, my personal laptop, and mobile devices connected via Wi-Fi.
+
+The following screenshots demonstrate how the system is set up and functioning.
+<br><br>
 ## Layer 2 Managed Network Switch
 ### Port Description 
 - **Port 1 : Connects to OpenWRT router** 
