@@ -86,13 +86,22 @@ The following screenshots demonstrate how the system is set up and functioning.
 
   - **Interfaces and Information**
     - guestwifi
-      - pkaya
+      - This interface is dedicated to guest users, primarily for Wi-Fi access.
+      - It isolates guest traffic, ensuring that only guest-related data flows through this interface.
+      - Guest can't connect each connected devices
+      - Network is separated (192.168.100.0/24)
+      - Can't use admin panal
     - lan
-      - Hutta
+      - This interface is used for home users, including both wired (LAN) and wireless (WLAN) connections.
+      - It carries internal network data and information for home devices.
+      - VLAN 99 is assigned to this interface for segmentation and security.
+      - Network is 192.168.10.0/24
     - tailscale
-      - Fuck
+      - This interface is used for remote access via Tailscale VPN, allowing secure connections to the home network from external locations.
     - wwan
-      - Paka
+      - This is the uplink interface that forwards all traffic from both the home and guest networks to the ISP.
+      - VLAN 1000 is assigned to this interface to separate WAN traffic from internal networks.
+      - DHCP is givenn by ISP router (192.168.1.0/24)
 
 ![image](https://github.com/user-attachments/assets/4e01056a-a958-47ca-9559-a23e570e5c01) # Interfaces
 
