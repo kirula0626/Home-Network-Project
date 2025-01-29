@@ -181,6 +181,7 @@ The following screenshots demonstrate how the system is set up and functioning.
 
 - **Speedtest via Ethernet using <a href="speedtest.net">speedtest.net</a>**
     - Home user, no limitation
+    - Public IP is dynamic
 
 https://github.com/user-attachments/assets/22c07a88-5bde-45d0-8fc4-aced37b586d6
 
