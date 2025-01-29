@@ -18,13 +18,13 @@ The following screenshots demonstrate how the system is set up and functioning.
 <br>
 
 ![image](https://github.com/user-attachments/assets/6c07d57a-c336-43f3-a4e8-bde614f2bf45)
-<br><br><br>
-**Vlan Configurartion**
-<br>
+<br><br>
+- **Vlan Configurartion**
+  
 ![image](https://github.com/user-attachments/assets/4f706f6f-9b85-4163-a84e-419ec97715f7)
 <br><br>
-**PID Configurartion**
-<br>
+- **PID Configurartion**
+
 ![image](https://github.com/user-attachments/assets/07251040-e1c6-4f7e-8a24-1ec89c126805)
 
 ## Openwrt
@@ -67,10 +67,14 @@ The following screenshots demonstrate how the system is set up and functioning.
 <br>
 
   - **User interface with Argon Theme**
+
 ![image](https://github.com/user-attachments/assets/6bd97ecb-aebc-4e0c-aaca-e97cf121d608)
+<br><br>
   
   - **Device list with MAC address and it's DHCP IP with lease time**
+
 ![image](https://github.com/user-attachments/assets/51ce38cc-560c-44dc-b839-d05c8101098b)
+<br><br>
   
   - **Wifi adapter and Information**
      - The inbult adapter is used for get internet from ISP via Wi-Fi if needed. This senario it is turned off
@@ -78,9 +82,10 @@ The following screenshots demonstrate how the system is set up and functioning.
          - Shows Signal strength
          - Can manualy Disconnect connected client(User)
          - Device MAC and BSSID
+
 ![image](https://github.com/user-attachments/assets/11f4db37-52ae-48dc-93a5-eb41360a5ed1) 
 ![image](https://github.com/user-attachments/assets/0dcda386-6f9b-41b9-adaf-4da05e608655)
-
+<br><br>
   - **Interfaces and Information**
     - guestwifi
       - This interface is dedicated to guest users, primarily for Wi-Fi access.
@@ -99,8 +104,9 @@ The following screenshots demonstrate how the system is set up and functioning.
       - This is the uplink interface that forwards all traffic from both the home and guest networks to the ISP.
       - VLAN 1000 is assigned to this interface to separate WAN traffic from internal networks.
       - DHCP is givenn by ISP router (192.168.1.0/24)
-![image](https://github.com/user-attachments/assets/4e01056a-a958-47ca-9559-a23e570e5c01)
 
+![image](https://github.com/user-attachments/assets/4e01056a-a958-47ca-9559-a23e570e5c01)
+<br><br>
 - **Firewall zoneing**
 
   1. **lan (Local Area Network)**
@@ -137,26 +143,28 @@ The following screenshots demonstrate how the system is set up and functioning.
      - Output: **Accept** (VMs can send traffic externally)
      - Forward: **Accept** (Forwarding allowed within VM network)
      - Masquerading: **Disabled** (VMs keep their IPs)
-<br><br>
+
 ![image](https://github.com/user-attachments/assets/de803872-a541-4cb2-9ff3-902c91025c8f) 
 <br><br>
 - **Trafic Rule set**
     - Trafic rules for each zone
        - Lan device can use ICMP but guest devices stops ICMP
-<br><br>
+
 ![image](https://github.com/user-attachments/assets/278049af-9c30-4881-b3e4-c2f2601e31a4)
 <br><br>
 - **Trafic Port Forwardings**
     - DNS is use externally port 5353
+
 ![image](https://github.com/user-attachments/assets/36ec9443-8672-447c-a5cb-9cb6f7c69b1b) # Firewall port forwards
 <br><br>
 - **Routing**
    - Internal Proxmox server VMs use the 10.0.0.0/8 network. Routing is used to provide internet access and connectivity to LAN end devices.
-![image](https://github.com/user-attachments/assets/79ed862f-ec9b-4184-99ea-355678571615)
 
+![image](https://github.com/user-attachments/assets/79ed862f-ec9b-4184-99ea-355678571615)
+<br><br>
 - **Bandwith Monitor**
     - The feature is used to determine each user's download and upload usage.
-<br><br>
+
 ![image](https://github.com/user-attachments/assets/e52cc23c-059f-4e57-9f33-2831f53f5307) 
 <br><br>
 - **Guest Wi-Fi Connectivity Page**
@@ -165,22 +173,29 @@ The following screenshots demonstrate how the system is set up and functioning.
     - The password expires and is automatically regenerated every 24 hours.
     - A real-time countdown shows when the password will expire.
     - Displays the count of connected devices/clients in real time.
-<br><br>
+
 ![image](https://github.com/user-attachments/assets/81d82ed1-bdf8-46f4-9dfe-a98458767460)
 <br><br>
 
 
 
-
+- **Speedtest via Ethernet using <a href="speedtest.net">speedtest.net</a>**
+    - Home user, no limitation
 
 https://github.com/user-attachments/assets/22c07a88-5bde-45d0-8fc4-aced37b586d6
 
 
-
+- **Speedtest via Wi_Fi (Home User)**
+    - Home user, no limitation
+    - 2.4 GHz signal
+    - USb Wi-Fi adapter (Atheros Ar9271)
 
 https://github.com/user-attachments/assets/fd2a4d1d-3bc0-450b-b91d-5d278d65466d
 
-
+- **Speedtest via Wi_Fi (Guest User)**
+    - Has Speed limitation ( Down : 5Mbps | Up : 2Mbps)
+    - 2.4 GHz signal
+    - USb Wi-Fi adapter (Atheros Ar9271)
 
 https://github.com/user-attachments/assets/fd81d605-90e3-4f2d-b874-4597145f6653
 
