@@ -8,16 +8,54 @@
 <br>
 
 ![image](https://github.com/user-attachments/assets/6c07d57a-c336-43f3-a4e8-bde614f2bf45)
-Vlan and PID
+<br><br><br>
+**Vlan Configurartion**
+<br>
 ![image](https://github.com/user-attachments/assets/4f706f6f-9b85-4163-a84e-419ec97715f7)
+<br><br>
+**PID Configurartion**
+<br>
 ![image](https://github.com/user-attachments/assets/07251040-e1c6-4f7e-8a24-1ec89c126805)
 
 ## Openwrt
 ### User Interface
-- Openwrt is...
-- This os is ruuning on Raspberry Pi 4 model B
+- <a href="https://openwrt.org/">OpenWrt</a> is a highly customizable Linux-based operating system primarily designed for embedded devices, such as routers. It is an open-source firmware that replaces the default firmware provided by device manufacturers, offering enhanced control, flexibility, and advanced features.
+
+  - Key Features of OpenWrt:
+    1. Customizability:
+
+        - Allows full control over router configurations.
+        - Users can add or remove packages to tailor the firmware to their needs.
+    2. Advanced Networking Capabilities:
+
+        - Supports features like VLANs, advanced QoS (Quality of Service), and dynamic DNS.
+        - Provides robust firewall management and NAT (Network Address Translation) settings.
+    3. Extensive Package Support:
+
+        - Includes a package manager (opkg) to install software like VPN servers/clients, file sharing services, or monitoring tools.
+    4. Performance:
+
+        - Often improves the performance of older hardware by optimizing resource usage.
+        - Enhances Wi-Fi performance and signal stability.
+    5. Security:
+
+        - Regular updates and community patches to fix vulnerabilities.
+        - Strong support for encrypted VPNs, firewalls, and secure protocols.
+    6. Open Source:
+
+        - Developed by a global community of contributors, ensuring transparency and reliability.
+    7. Common Use Cases:
+        - Home Networks: Improve performance and add features unavailable on stock firmware.
+        - Small Business Networks: Set up secure VPNs, bandwidth control, and advanced routing.
+        - Specialized Applications: Deploy in IoT projects, create mesh networks, or use as a NAS server.
+
+- This os is runing on Raspberry Pi 4 model B
 - 4GB RAM and 32GB ROM
-- Version : 
+- Version : OpenWrt 23.05.5 r24106-10cc5fcd00
+- Architecture : ARMv8 Processor rev 3
+- Target Platform : bcm27xx/bcm2711
+<br>
+
 ![image](https://github.com/user-attachments/assets/6bd97ecb-aebc-4e0c-aaca-e97cf121d608)
 ![image](https://github.com/user-attachments/assets/51ce38cc-560c-44dc-b839-d05c8101098b)
 ![image](https://github.com/user-attachments/assets/0dcda386-6f9b-41b9-adaf-4da05e608655)
