@@ -66,19 +66,32 @@ The following screenshots demonstrate how the system is set up and functioning.
 - Target Platform : bcm27xx/bcm2711
 <br>
 
-![image](https://github.com/user-attachments/assets/6bd97ecb-aebc-4e0c-aaca-e97cf121d608) //Interface
-![image](https://github.com/user-attachments/assets/51ce38cc-560c-44dc-b839-d05c8101098b) // DHCP Lease
-![image](https://github.com/user-attachments/assets/0dcda386-6f9b-41b9-adaf-4da05e608655) // Wifi Station
-![image](https://github.com/user-attachments/assets/4e01056a-a958-47ca-9559-a23e570e5c01) //Interface
-![image](https://github.com/user-attachments/assets/11f4db37-52ae-48dc-93a5-eb41360a5ed1) // Wifi broatcast
-![image](https://github.com/user-attachments/assets/79ed862f-ec9b-4184-99ea-355678571615) // Routing
+  -**User interface with Argon Theme**
+  
+![image](https://github.com/user-attachments/assets/6bd97ecb-aebc-4e0c-aaca-e97cf121d608) #Interface
+  
+  -**Device list with MAC address and it's DHCP IP with lease time**
 
-![image](https://github.com/user-attachments/assets/de803872-a541-4cb2-9ff3-902c91025c8f) // Firewall Zone
-![image](https://github.com/user-attachments/assets/278049af-9c30-4881-b3e4-c2f2601e31a4) // Trafic rules
-![image](https://github.com/user-attachments/assets/36ec9443-8672-447c-a5cb-9cb6f7c69b1b) // Firewall port forwards
+![image](https://github.com/user-attachments/assets/51ce38cc-560c-44dc-b839-d05c8101098b) # DHCP Lease
 
-![image](https://github.com/user-attachments/assets/e52cc23c-059f-4e57-9f33-2831f53f5307) // Bandwith monitor 
-![image](https://github.com/user-attachments/assets/81d82ed1-bdf8-46f4-9dfe-a98458767460) // Guest Page
+  
+  - **Wifi adapter and it's uses**
+     - The inbult adapter is used for get internet from ISP via Wi-Fi if needed. This senario it is turned off
+     - USb Wi-Fi adapter (Atheros Ar9271) is use to Broatcast Personal SSID and Guest SSID
+
+![image](https://github.com/user-attachments/assets/0dcda386-6f9b-41b9-adaf-4da05e608655) # Wifi Station
+![image](https://github.com/user-attachments/assets/11f4db37-52ae-48dc-93a5-eb41360a5ed1) # Wifi broatcast
+
+![image](https://github.com/user-attachments/assets/4e01056a-a958-47ca-9559-a23e570e5c01) # Interfaces
+
+![image](https://github.com/user-attachments/assets/de803872-a541-4cb2-9ff3-902c91025c8f) # Firewall Zone
+![image](https://github.com/user-attachments/assets/278049af-9c30-4881-b3e4-c2f2601e31a4) # Trafic rules
+![image](https://github.com/user-attachments/assets/36ec9443-8672-447c-a5cb-9cb6f7c69b1b) # Firewall port forwards
+![image](https://github.com/user-attachments/assets/79ed862f-ec9b-4184-99ea-355678571615) # Routing
+
+![image](https://github.com/user-attachments/assets/e52cc23c-059f-4e57-9f33-2831f53f5307) # Bandwith monitor
+
+![image](https://github.com/user-attachments/assets/81d82ed1-bdf8-46f4-9dfe-a98458767460) # Guest Page
 
 
 
