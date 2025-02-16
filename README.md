@@ -205,13 +205,62 @@ https://github.com/user-attachments/assets/fd81d605-90e3-4f2d-b874-4597145f6653
 
 
 ## Adblock Home
+AdGuard Home is a self-hosted network-wide ad blocker and privacy protection tool. It functions as a DNS server that filters out ads, trackers, and malicious domains, improving security and performance.
+
+- **Features:**
+    - Network-wide ad blocking – Blocks ads and trackers on all connected devices.
+    - Privacy Protection – Filters out tracking requests from websites and apps.
+    - Custom DNS Filtering – Allows setting up custom blocklists and allowlists.
+    - Parental Control – Blocks access to adult content and unsafe websites.
+    - DoH/DoT Support – Encrypts DNS traffic for enhanced privacy.
+    - DNS-over-QUIC (DoQ) Support – Provides secure and fast DNS resolution.
+    - Logging & Statistics – Tracks DNS queries and shows detailed reports.
+    - Lightweight & Self-Hosted – Runs efficiently on Raspberry Pi, Linux, Windows, and other platforms.
+
+- **Why Using AdGuard Home:**
+    - Block Ads – Remove ads across all devices without browser extensions.
+    - Parental Control – Restrict adult content and manage safe browsing.
+    - DNS on Port 5353 – Custom DNS resolution for better control and security.
+ 
 ![image](https://github.com/user-attachments/assets/71b3f747-6f7f-48ff-b03b-9c41788fbdfc)
 
 ## NAS server
+A NAS (Network-Attached Storage) is a dedicated storage device connected to a network, allowing multiple users and devices to access and manage data centrally. It functions as a personal or business cloud storage solution.
+
+- **Key Features of NAS:**
+  - Centralized Storage – Store and access files from any device on the network.
+  - Automatic Backups – Schedule backups to prevent data loss.
+  - Remote Access – Access files from anywhere via the internet.
+  - File Sharing – Easily share files across devices and users.
+  - RAID Support – Provides redundancy and data protection (depending on configuration).
+  - Energy Efficient – Consumes less power compared to a full-fledged PC.
+
+- **TrueNAS**
+  
+TrueNAS is a powerful, open-source NAS operating system based on FreeBSD. It is available in two versions:
+
+   - TrueNAS CORE – Free and open-source, ideal for home and small businesses.
+   - TrueNAS SCALE – Linux-based, with additional features like Docker and Kubernetes support.
+  
+- **Key Features of TrueNAS:**
+   - ZFS File System – Advanced storage management with data integrity.
+   - Snapshots & Versioning – Protects against accidental deletions and corruption.
+   - Data Encryption – Ensures security for sensitive files.
+   - Virtualization & Plugins – Supports VMs, Docker, and applications like Plex.
+   - Cloud Sync – Integrates with services like Google Drive, Dropbox, etc.
+   - High Performance – Efficient resource management for fast file access.
+
+- **Why  Using a NAS (TrueNAS)**
+  
+I once faced a situation where my work laptop got corrupted, and I lost all my data. While cloud storage is an option, free plans are limited to 25-50GB, and I would have to pay for more space. Instead, I decided to repurpose my old PC with a 1TB hard disk to set up a TrueNAS-based NAS as a cost-effective, self-hosted backup solution. This way, I have full control over my data without monthly fees.
+
+
 ![image](https://github.com/user-attachments/assets/8a1fab87-f45d-434f-a627-f8a53b9970bd)
 ![image](https://github.com/user-attachments/assets/80622c9e-3e43-4a9d-a7cd-d57b8ba335ea)
+### Apps
 ![image](https://github.com/user-attachments/assets/3c941d68-7007-4bab-b725-0da592696816)
 ![image](https://github.com/user-attachments/assets/eff6aacc-e47f-4b65-969c-5f8f23b5ed52)
+### SMB Share
 ![image](https://github.com/user-attachments/assets/01b48d9f-ea02-43a0-866b-6f38c6c2ed4c)
 
 ## Proxmox server
